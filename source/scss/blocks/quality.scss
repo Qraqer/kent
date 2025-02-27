@@ -1,0 +1,142 @@
+.quality__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quality__desc-block {
+  width: calc((100% - 20px) / 2);
+}
+
+.quality__img-block {
+  width: calc((100% - 20px) / 2);
+  display: flex;
+  justify-content: center;
+}
+
+.quality__img-item {
+  position: relative;
+  width: 100%;
+  padding-top: 58%;
+  overflow: hidden;
+  display: none;
+
+  img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.quality__tabs {
+  margin: 0 0 40px;
+}
+
+.quality__tab {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $main-text;
+  width: max-content;
+  padding-bottom: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    border-bottom: 2px solid $main-text;
+  }
+
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
+.quality__tab-desc {
+  display: none;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: $main-text;
+    margin: 0 0 40px;
+  }
+}
+
+@include tablet {
+  .quality__content {
+    flex-direction: column;
+  }
+
+  .quality__desc-block,
+  .quality__img-block {
+    width: 100%;
+  }
+
+  .quality__desc-block {
+    margin: 0 0 40px;
+  }
+
+  .quality__img-item {
+    padding-top: 55%;
+  }
+}
+
+@include mobile {
+  .quality__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .quality__title {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .quality__tab-desc {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .quality__img-block {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .quality__img-item {
+    padding-top: 111%;
+
+    img {
+      height: 100%;
+      width: auto;
+      max-width: none;
+    }
+  }
+
+  .quality__tab {
+    &:first-child {
+      margin-left: 16px;
+    }
+
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+
+  .quality__tabs {
+    margin: 0 0 24px;
+  }
+
+  .quality__tab-desc {
+    p {
+      margin: 0 0 24px;
+    }
+  }
+
+  .quality__desc-block {
+    margin: 0 0 24px;
+  }
+}

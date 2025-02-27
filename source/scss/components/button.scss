@@ -1,0 +1,103 @@
+.btn,
+.btn-secondary,
+.btn-third {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  display: inline-block;
+  padding: 22px 38px;
+  background-color: $primary;
+  border: none;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  transition: background-color 0.2s;
+
+  & * {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-hover;
+  }
+
+  &:active {
+    background-color: $primary-active;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    background-color: $grey100;
+    color: $grey400;
+    pointer-events: none;
+  }
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: $main-text;
+
+  &:hover {
+    background-color: $grey100;
+  }
+
+  &:active {
+    background-color: $grey200;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    background-color: $grey100;
+    color: $grey400;
+    pointer-events: none;
+  }
+}
+
+.btn-third {
+  background-color: $main-text;
+  color: #fff;
+}
+
+.btn-arrow {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  color: $primary;
+  transition: color 0.2s;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    color: $primary-hover;
+  }
+
+  &:active {
+    color: $primary-active;
+  }
+}
+
+@include mobile {
+  .btn,
+  .btn-secondary,
+  .btn-third {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    width: 100%;
+  }
+}

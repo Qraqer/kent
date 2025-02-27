@@ -1,0 +1,143 @@
+.innovation__promo {
+  width: 100%;
+  min-height: 500px;
+  padding: 60px;
+  margin: 0 0 80px;
+  background: no-repeat center/cover url('../img/innovation-bg.jpg');
+}
+
+.innovation__promo-logo {
+  margin: 0 0 48px;
+}
+
+.innovation__slogan {
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 55px;
+  color: #fff;
+  max-width: 550px;
+  display: block;
+}
+
+.innovation__desc-block {
+  margin: 0 0 80px;
+}
+
+.innovation__desc-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  margin: 0 0 24px;
+  color: $main-text;
+}
+
+.innovation__desc-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: $main-text;
+  margin: 0;
+}
+
+.innovation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid $grey200;
+}
+
+.innovation__item {
+  display: flex;
+  padding: 40px 0;
+  border-bottom: 1px solid $grey200;
+}
+
+.innovation__item-img {
+  width: 362px;
+  height: 204px;
+  background-color: $grey100;
+  margin-right: 80px;
+  flex-shrink: 0;
+
+  img {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.innovation__item-desc-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 16px;
+  color: $main-text;
+}
+
+.innovation__item-desc-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $main-text;
+  margin: 0;
+}
+
+@include tablet {
+  .innovation__promo {
+    min-height: 460px;
+    padding: 40px 32px;
+  }
+
+  .innovation__item {
+    padding: 32px 0;
+    flex-direction: column;
+  }
+
+  .innovation__item-img {
+    margin: 0 0 24px;
+  }
+}
+
+@include mobile {
+  .innovation__promo {
+    min-height: 400px;
+    padding: 24px 16px;
+    margin: 0 0 40px;
+  }
+
+  .innovation__promo-logo {
+    margin: 0 0 24px;
+
+    img {
+      width: 148px;
+      height: 21px;
+    }
+  }
+
+  .innovation__slogan {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .innovation__desc-block {
+    margin: 0 0 40px;
+  }
+
+  .innovation__desc-title {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 24px;
+  }
+
+  .innovation__item-img {
+    width: 100%;
+    max-width: 362px;
+  }
+
+  .innovation__item-desc-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 16px;
+  }
+}
