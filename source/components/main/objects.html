@@ -1,0 +1,37 @@
+<section class="objects-index">
+  <div class="objects__container container">
+    <div class="objects__header">
+      <h2 class="objects__title section-title">Объекты</h2>
+      <a href="#" class="index__title-link">Все объекты</a>
+    </div>
+    <div class="objects__content">
+      <div class="objects__slider swiper">
+        <div class="objects__wrapper swiper-wrapper">
+          @@loop('./components/main/object_slide.html', [
+          {
+            image: 'objects_main_page_1',
+            title: 'Гостиница KRAVT INNOPOLIS'
+          },
+          {
+            image: 'objects_main_page_2',
+            title: 'Севастопольский кадетский корпус Следственного комитета Российской Федерации имени В.И. Истомина'
+          },
+          {
+            image: 'objects_main_page_1',
+            title: 'Севастопольский кадетский корпус Следственного комитета Российской Федерации имени В.И. Истомина Севастопольский кадетский корпус Следственного комитета Российской Федерации имени В.И. Истомина'
+          }
+          ])
+        </div>
+        <div class="objects__navigation">
+          <div class="slider-button-prev slider-button prev">
+            <img src="img/arrow-left.svg" alt="">
+          </div>
+          <div class="slider-button-next slider-button next">
+            <img src="img/arrow-left.svg" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
