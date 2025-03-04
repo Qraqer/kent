@@ -2,9 +2,17 @@ const gulp = require("gulp");
 const htmlmin = require("gulp-htmlmin");
 const chalk = require("chalk");
 const fs = require("fs");
+const fileinclude = require('gulp-file-include');
 
 const htmlMin = () => {
   return gulp.src("source/*.html")
+      .pipe(
+        fileinclude({
+          prefix: '@@',
+          basepath: 'source',
+          indent: true,
+        })
+      )
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
 }
@@ -41,7 +49,7 @@ const html = gulp.series(
     htmlFull,
     htmlMin
   ),
-  showHtmlMinSize
+  /* showHtmlMinSize */
 )
 
 module.exports = html;
