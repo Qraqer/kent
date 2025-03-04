@@ -1,0 +1,38 @@
+@@include('./components/common/header.html', { title: 'Объекты - список' })
+
+@@include('./components/common/modalback-u.html', { indexpage: 'objects-index.html' })
+
+<div class="breadcrumbs">
+  <div class="breadcrumbs__container container">
+    <div class="breadcrumbs__links">
+      <a href="objects-index.html" class="breadcrumbs__link">Главная</a>
+      <a class="breadcrumbs__link">Объекты</a>
+    </div>
+  </div>
+</div>
+
+<div class="main-title">
+  <div class="main-title__container container">
+    <h1 class="main-title__title">Объекты</h1>
+  </div>
+</div>
+
+<section class="objects__section">
+  <div class="objects__container container">
+
+  @@include('./components/objects/filter-selected.html')
+
+  <div class="objects__list add--spinner">
+    <div class="objects__list-empty">Объектов не найдено.<br>Вы можете <span class="filter__reset js-filter-reset">сбросить фильтр</span>
+    </div>
+  </div>
+</section>
+
+@@include('./components/objects/submenu.html')
+@@include('./components/common/footer.html')
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  spinner.testMode = true;
+})
+</script>

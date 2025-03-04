@@ -1,0 +1,114 @@
+@@include('./components/common/header.html', { title: 'Объекты - список' })
+
+@@include('./components/common/modalback-u.html', { indexpage: 'objects-index.html' })
+
+<div class="breadcrumbs">
+  <div class="breadcrumbs__container container">
+    <div class="breadcrumbs__links">
+      <a href="objects-index.html" class="breadcrumbs__link">Главная</a>
+      <a class="breadcrumbs__link">Объекты</a>
+    </div>
+  </div>
+</div>
+
+<div class="main-title">
+  <div class="main-title__container container">
+    <h1 class="main-title__title">Объекты</h1>
+  </div>
+</div>
+
+<section class="objects__section">
+  <div class="objects__container container">
+
+  @@include('./components/objects/filter.html')
+
+  <div class="objects__list add--spinner">
+    @@loop('./components/objects/card.html', [
+      {
+        img: 'objects_01',
+        city: 'Казань',
+        title: 'Гостиница KRAVT INNOPOLIS',
+        equipment: 'Kentatsu DX PRO'
+      },
+      {
+        img: 'objects_02',
+        city: 'Лиски',
+        title: 'Жилой Комплекс «Приозёрный»',
+        equipment: 'Kentatsu Отопительные котлы'
+      },
+      {
+        img: 'objects_03',
+        city: 'Нижний Новгород',
+        title: 'Логистический комплекс «Почта России»',
+        equipment: 'Kentatsu DX PRO'
+      },
+      {
+        img: 'objects_04',
+        city: 'Нижний Новгород',
+        title: 'Фабрика «Маяк»',
+        equipment: 'Kentatsu DX PRO'
+      },
+      {
+        img: 'objects_05',
+        city: 'Москва',
+        title: 'ЖК «Кварталы 21/19»',
+        equipment: 'Kentatsu Сплит-системы'
+      },
+      {
+        img: 'objects_06',
+        city: 'Новосибирск',
+        title: 'Бизнес‑центр «Премьер плаза», офис компании S7',
+        equipment: 'Kentatsu Фанкойлы'
+      },
+      {
+        img: 'objects_07',
+        city: 'Севастополь',
+        title: 'Севастопольский кадетский корпус Следственного комитета Российской Федерации имени В. И. Истомина',
+        equipment: 'Kentatsu DX PRO'
+      },
+      {
+        img: 'objects_08',
+        city: 'Красноярск',
+        title: 'Красноярская межрайонная больница № 2, многопрофильная поликлиника',
+        equipment: 'Kentatsu DX PRO'
+      },
+      {
+        img: 'objects_09',
+        city: 'Оренбург',
+        title: 'Жилой район «Гранд Парк»',
+        equipment: 'Kentatsu Отопительные котлы'
+      },
+      {
+        img: 'objects_10',
+        city: 'Новосибирск',
+        title: 'Складской комплекс',
+        equipment: 'Kentatsu Отопительные котлы'
+      },
+      {
+        img: 'objects_11',
+        city: 'Великий Новгород',
+        title: 'Офис НПЦ «Акрон Инжиниринг»',
+        equipment: 'Kentatsu DX PRO'
+      },
+      {
+        img: 'objects_12',
+        city: 'Москва',
+        title: 'МХАТ им. М.Горького',
+        equipment: 'Kentatsu DX PRO'
+      },
+    ])
+    </div>
+    <div class="load-more__wrapper">
+      <button class="btn-third" id="load_more">Показать ещё</button>
+    </div>
+  </div>
+</section>
+
+@@include('./components/objects/submenu.html')
+@@include('./components/common/footer.html')
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  spinner.testMode = true;
+})
+</script>
