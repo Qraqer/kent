@@ -1,0 +1,44 @@
+.checkbox-block {
+  label {
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.error {
+    .checkbox-block__checkbox {
+      outline: 2px solid $fail;
+    }
+  }
+
+  input:checked + .checkbox-block__checkbox {
+    background: no-repeat center/12px 12px url('../img/check.svg'), $main-text;
+  }
+
+  a {
+    color: $main-text;
+    border-bottom: 1px solid $grey300;
+  }
+
+  // input:focus + .checkbox-block__checkbox {
+  //   outline: 2px solid $primary;
+  // }
+}
+
+.checkbox-block__checkbox {
+  width: 24px;
+  height: 24px;
+  background-color: $grey200;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.checkbox-block__text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: $main-text;
+  padding-top: 2px;
+}

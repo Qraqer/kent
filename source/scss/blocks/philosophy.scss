@@ -1,0 +1,246 @@
+.philosophy__promo {
+  width: 100%;
+  min-height: 500px;
+  padding: 60px;
+  margin: 0 0 80px;
+  background: linear-gradient(
+      142.15deg,
+      rgba(0, 0, 0, 0.4) 5.85%,
+      rgba(0, 0, 0, 0) 75.3%
+    ),
+    no-repeat top calc(50% + 60px) center/cover url('../img/philosophy-bg.jpg');
+}
+
+.philosophy__promo-logo {
+  margin: 0 0 48px;
+}
+
+.philosophy__slogan {
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 55px;
+  color: #fff;
+  max-width: 550px;
+  display: inline-block;
+}
+
+.philosophy__desc-block {
+  margin: 0 0 80px;
+}
+
+.philosophy__desc-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  margin: 0 0 24px;
+  color: $main-text;
+}
+
+.philosophy__desc-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: $main-text;
+  margin: 0;
+}
+
+.philosophy__values-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+}
+
+.philosophy__values-item {
+  width: calc((100% - 40px) / 3);
+  padding: 32px;
+  border: 1px solid $grey200;
+  margin-top: 20px;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 20px;
+  }
+}
+
+.philosophy__value-img {
+  width: 64px;
+  height: 64px;
+  margin: 0 0 24px;
+}
+
+.philosophy__value-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 8px;
+  color: $main-text;
+}
+
+.philosophy__value-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $main-text;
+  margin: 0;
+}
+
+.philosophy__partnership {
+  display: flex;
+}
+
+.philosophy__partnership-desc {
+  width: 32.4%;
+  padding: 32px;
+  background-color: $primary;
+}
+
+.philosophy__partnership-slogan {
+  display: block;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #fff;
+  margin: 0 0 236px;
+}
+
+.philosophy__partnership-img {
+  flex-grow: 1;
+  background: no-repeat center/cover url('../img/partnership-bg.jpg'), $grey100;
+}
+
+.philosophy__partnership.buy {
+  .philosophy__partnership-slogan {
+    margin-bottom: 198px;
+  }
+
+  .philosophy__partnership-img {
+    background: no-repeat center/cover url('../img/buy-bg.jpg'), $grey100;
+  }
+}
+
+@include desktop-m {
+  .philosophy__promo {
+    background: linear-gradient(
+        142.15deg,
+        rgba(0, 0, 0, 0.4) 5.85%,
+        rgba(0, 0, 0, 0) 75.3%
+      ),
+      no-repeat top calc(50% + 20px) center/cover
+        url('../img/philosophy-bg.jpg');
+  }
+
+  .philosophy__partnership.buy {
+    .philosophy__partnership-slogan {
+      margin-bottom: 160px;
+    }
+  }
+}
+
+@include tablet {
+  .philosophy__promo {
+    min-height: 460px;
+    padding: 40px 32px;
+    background: linear-gradient(
+        142.15deg,
+        rgba(0, 0, 0, 0.4) 5.85%,
+        rgba(0, 0, 0, 0) 75.3%
+      ),
+      no-repeat center/cover url('../img/philosophy-bg.jpg');
+  }
+
+  .philosophy__values-list {
+    margin-top: 0;
+  }
+
+  .philosophy__values-item {
+    width: 100%;
+    margin-top: 0;
+
+    &:nth-child(n) {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .philosophy__partnership-desc {
+    width: 50%;
+  }
+}
+
+@include mobile {
+  .philosophy__promo {
+    min-height: 400px;
+    padding: 24px 16px;
+    margin: 0 0 40px;
+  }
+
+  .philosophy__promo-logo {
+    margin: 0 0 24px;
+
+    img {
+      width: 148px;
+      height: 21px;
+    }
+  }
+
+  .philosophy__slogan {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .philosophy__desc-block {
+    margin: 0 0 40px;
+  }
+
+  .philosophy__desc-title {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 24px;
+  }
+
+  .philosophy__values-item {
+    padding: 24px 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .philosophy__value-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 12px;
+  }
+
+  .philosophy__partnership {
+    flex-direction: column-reverse;
+  }
+
+  .philosophy__partnership-img {
+    height: 280px;
+    width: 100%;
+  }
+
+  .philosophy__partnership-desc {
+    width: 100%;
+    padding: 24px 16px 16px 16px;
+  }
+
+  .philosophy__partnership-slogan {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 114px;
+  }
+
+  .philosophy__partnership.buy {
+    .philosophy__partnership-slogan {
+      margin-bottom: 56px;
+    }
+  }
+}

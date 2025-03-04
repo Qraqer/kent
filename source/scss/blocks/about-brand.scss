@@ -1,0 +1,10 @@
+.about-brand__part {
+  display: none;
+}
+
+@include mobile {
+  .about-brand__tabs-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

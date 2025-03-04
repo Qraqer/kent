@@ -1,0 +1,10 @@
+// .series__part {
+//   display: none;
+// }
+
+@include mobile {
+  .series__tabs-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,97 @@
+.assembly__img-block {
+  width: 100%;
+  height: 500px;
+  margin: 0 0 20px;
+  background: no-repeat center/cover url('../img/assembly-bg.jpg'), #f3f3f3;
+}
+
+.assembly__benefits {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.assembly__benefit {
+  width: calc((100% - 40px) / 3);
+  padding: 32px;
+  padding-top: 120px;
+  border: 1px solid $grey100;
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+  background-position: top 32px left 32px;
+
+  &.jap {
+    background-image: url('../img/jap.svg');
+  }
+
+  &.technology {
+    background-image: url('../img/technology.svg');
+  }
+
+  &.eco {
+    background-image: url('../img/eco.svg');
+  }
+}
+
+.assembly__benefit-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: $main-text;
+  margin: 0 0 8px;
+}
+
+.assembly__benefit-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $main-text;
+  margin: 0;
+}
+
+@include desktop-m {
+  .assembly__img-block {
+    background: no-repeat top -100px center/cover url('../img/assembly-bg.jpg'),
+      #f3f3f3;
+  }
+}
+
+@include tablet {
+  .assembly__img-block {
+    height: 350px;
+    background: no-repeat top calc(50% + 45px) center/cover
+        url('../img/assembly-bg.jpg'),
+      #f3f3f3;
+  }
+
+  .assembly__benefits {
+    flex-direction: column;
+  }
+
+  .assembly__benefit {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include mobile {
+  .assembly__img-block {
+    height: 240px;
+    background: no-repeat center/cover url('../img/assembly-bg.jpg'), #f3f3f3;
+  }
+
+  .assembly__benefit {
+    padding: 24px 16px;
+    padding-top: 112px;
+  }
+
+  .assembly__benefit-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 12px;
+  }
+}

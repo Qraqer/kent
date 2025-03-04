@@ -1,0 +1,81 @@
+.tabs {
+  margin: 0 0 40px;
+}
+
+.tab {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $main-text;
+  width: max-content;
+  padding-bottom: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    border-bottom: 2px solid $main-text;
+  }
+
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
+.filter-tabs {
+  margin: 0 0 40px;
+}
+
+.filter-tab {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $main-text;
+  padding: 8px 16px;
+  border-radius: 33px;
+  background-color: $grey100;
+  width: max-content;
+  transition: color 0.2s, background-color 0.2s;
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      background-color: $primary;
+      color: #fff;
+    }
+  }
+
+  // &:hover {
+  //   cursor: pointer;
+  //   background-color: $primary;
+  //   color: #fff;
+  // }
+
+  &.active {
+    background-color: $main-text;
+    color: #fff;
+  }
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+@include mobile {
+  .tab,
+  .filter-tab {
+    &:first-child {
+      margin-left: 16px;
+    }
+
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+
+  .tabs,
+  .filter-tabs {
+    margin: 0 0 24px;
+  }
+}

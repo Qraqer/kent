@@ -1,0 +1,74 @@
+.promo__block {
+  padding: 60px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+      95.08deg,
+      rgba(132, 1, 1, 0.3) 3.85%,
+      rgba(189, 13, 13, 0) 49.77%
+    ),
+    no-repeat center / cover url('../img/promo-bg-new.jpg');
+}
+
+.promo__title {
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 55px;
+  color: #fff;
+  margin: 0 0 24px;
+  max-width: 550px;
+}
+
+.promo__more-link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@include tablet {
+  .promo__block {
+    padding: 32px;
+    min-height: 727px;
+    background: linear-gradient(
+        95.08deg,
+        rgba(150, 0, 0, 0.3) 3.85%,
+        rgba(189, 13, 13, 0) 49.77%
+      ),
+      no-repeat center / cover url('../img/promo-bg-new.jpg');
+  }
+}
+
+@include mobile {
+  .promo__block {
+    padding: 16px;
+    min-height: 400px;
+    background: linear-gradient(
+        95.08deg,
+        rgba(150, 0, 0, 0.3) 3.85%,
+        rgba(189, 13, 13, 0) 49.77%
+      ),
+      no-repeat center / cover url('../img/promo-bg-new.jpg');
+  }
+
+  .promo__title {
+    font-size: 24px;
+    line-height: 29px;
+    // margin: 0 0 271px;
+    max-width: 260px;
+  }
+
+  .promo__more-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo__block {
+    background: linear-gradient(
+        95.08deg,
+        rgba(150, 0, 0, 0.3) 3.85%,
+        rgba(189, 13, 13, 0) 49.77%
+      ),
+      no-repeat center / cover url('../img/promo-bg-new.jpg');
+  }
+}
