@@ -8,15 +8,9 @@ $trigger.on('click', function () {
 })
 
 const $modalClose = $('.modal__close-btn')
-const $btnClose = $('.modal__btn-block-close')
 const $overlay = $('.modal__overlay')
 
 $modalClose.on('click', function () {
-  $(this).parents('.modal').first().removeClass('js-show')
-  $('body').removeClass('js-no-scroll')
-})
-
-$btnClose.on('click', function () {
   $(this).parents('.modal').first().removeClass('js-show')
   $('body').removeClass('js-no-scroll')
 })

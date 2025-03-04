@@ -1,0 +1,116 @@
+<style>
+  .extra-menu {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    z-index: 999;
+    transition: .2s ease;
+  }
+  .extra-menu.is--active {
+    transform: translate(-50%, 0);
+  }
+  .extra-menu__wrapper {
+    background: #ffffffdd;
+    padding: 12px;
+    border: 2px solid #D1D8E1;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .extra-menu__title {
+    flex: 1 1 auto;
+  }
+  .extra-menu__inner {
+    display: flex;
+    gap: 12px;
+  }
+  .extra-menu__item {
+    border: 1px solid #D1D8E1;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    align-items: center;
+    color: #6C7684;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s ease;
+    white-space: nowrap;
+  }
+  .extra-menu__item.is--active {
+    background: #ddd;
+  }
+  .extra-menu__item:hover {
+    border-color: #6C7684;
+    color: #1a1a1a;
+  }
+  .extra-menu__item span {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+  }
+  .extra-menu__btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    background: #ffffffdd;
+    border: 2px solid #D1D8E1;
+    border-bottom-color: #ffffffdd;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    width: 48px;
+    height: 24px;
+    top: -22px;
+  }
+  .extra-menu__btn::after {
+    content: '';
+    border: 12px solid transparent;
+    border-bottom-color: #6C7684;
+    border-width: 10px 10px;
+    position: absolute;
+    left: 12px;
+    top: -6px;
+    opacity: .6;
+    transition: .2s ease;
+  }
+  .extra-menu__btn:hover::after {
+    opacity: 1;
+  }
+  .extra-menu.is--active .extra-menu__btn::after {
+    transform: rotate(180deg) translateY(-13px);
+  }
+  .extra-menu__input {
+    width: 60px;
+    font-size: 14px;
+  }
+  #finish_date {
+    width: 155px;
+  }
+</style>
+  
+<div class="extra-menu is--active">
+  <div class="extra-menu__btn js-submenu-toggle"></div>
+  <div class="extra-menu__wrapper">
+    <div class="extra-menu__title">Меню разработчика</div>
+    <div class="extra-menu__inner">
+      <div class="extra-menu__item">
+        <p>Спиннер ajax-загрузки отображается после изменения параметров фильтра, и пропадает после загрузки контента. Для демонстрации спиннер крутится в течение 1,5 сек.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.js-submenu-toggle')?.addEventListener('click', event => {
+    event.target.parentNode.classList.toggle('is--active');
+  })
+
+  setTimeout(() => document.querySelector('.js-submenu-toggle').click(), 2500);
+})
+</script>

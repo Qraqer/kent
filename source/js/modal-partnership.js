@@ -1,36 +1,33 @@
 const $modal = $('#modal-partnership')
 const $form = $modal.find('form')
 const $name = $modal.find('input[name="name"]')
-const $company = $modal.find('input[name="company"]')
-// const $surname = $modal.find('input[name="surname"]')
-// const $region = $modal.find('select[name="region"]')
+const $surname = $modal.find('input[name="surname"]')
+const $region = $modal.find('select[name="region"]')
 const $country = $modal.find('select[name="country"]')
 const $email = $modal.find('input[name="email"]')
-// const $phone = $modal.find('input[name="phone"]')
-// const $fax = $modal.find('input[name="fax"]')
+const $phone = $modal.find('input[name="phone"]')
+const $fax = $modal.find('input[name="fax"]')
 const $message = $modal.find('textarea[name="message"]')
 const $checkbox = $modal.find('input[name="agreement"]')
 const $submit = $modal.find('.modal__submit')
 
-// let isRegionSelected = false
+let isRegionSelected = false
 let isCountrySelected = false
 let isNameValid = false
-let isCompanyValid = false
-// let isSurnameValid = false
+let isSurnameValid = false
 let isEmailValid = false
-// let isPhoneValid = false
-// let isFaxValid = false
+let isPhoneValid = false
+let isFaxValid = false
 let isMessageValid = false
 let isChecked = false
 
-// let hasRegionError = false
+let hasRegionError = false
 let hasCountryError = false
 let hasNameError = false
-let hasCompanyError = false
-// let hasSurnameError = false
+let hasSurnameError = false
 let hasEmailError = false
-// let hasPhoneError = false
-// let hasFaxError = false
+let hasPhoneError = false
+let hasFaxError = false
 let hasMessageError = false
 let hasCheckboxError = false
 
@@ -48,14 +45,13 @@ const removeError = $item => {
 
 const checkErrors = () => {
   if (
-    // hasRegionError ||
+    hasRegionError ||
     hasCountryError ||
     hasNameError ||
-    hasCompanyError ||
-    // hasSurnameError ||
+    hasSurnameError ||
     hasEmailError ||
-    // hasPhoneError ||
-    // hasFaxError ||
+    hasPhoneError ||
+    hasFaxError ||
     hasMessageError ||
     hasCheckboxError
   ) {
@@ -66,10 +62,10 @@ const checkErrors = () => {
 }
 
 const setErrors = () => {
-  // if (!isRegionSelected) {
-  //   setError($region)
-  //   hasRegionError = true
-  // }
+  if (!isRegionSelected) {
+    setError($region)
+    hasRegionError = true
+  }
   if (!isCountrySelected) {
     setError($country)
     hasCountryError = true
@@ -78,26 +74,22 @@ const setErrors = () => {
     setError($name)
     hasNameError = true
   }
-  if (!isCompanyValid) {
-    setError($company)
-    hasCompanyError = true
+  if (!isSurnameValid) {
+    setError($surname)
+    hasSurnameError = true
   }
-  // if (!isSurnameValid) {
-  //   setError($surname)
-  //   hasSurnameError = true
-  // }
   if (!isEmailValid) {
     setError($email)
     hasEmailError = true
   }
-  // if (!isPhoneValid) {
-  //   setError($phone)
-  //   hasPhoneError = true
-  // }
-  // if (!isFaxValid) {
-  //   setError($fax)
-  //   hasFaxError = true
-  // }
+  if (!isPhoneValid) {
+    setError($phone)
+    hasPhoneError = true
+  }
+  if (!isFaxValid) {
+    setError($fax)
+    hasFaxError = true
+  }
   if (!isMessageValid) {
     setError($message)
     hasMessageError = true
@@ -128,18 +120,6 @@ const onNameInput = () => {
   }
 }
 
-const onCompanyInput = () => {
-  removeError($company)
-  hasCompanyError = false
-  checkErrors()
-
-  if (($company.val().trim().length = 0)) {
-    isCompanyValid = false
-  } else {
-    isCompanyValid = true
-  }
-}
-
 // const checkSurname = () => {
 //   if ($surname.val().trim().length = 0) {
 //     setError($surname)
@@ -150,17 +130,17 @@ const onCompanyInput = () => {
 //   }
 // }
 
-// const onSurnameInput = () => {
-//   removeError($surname)
-//   hasSurnameError = false
-//   checkErrors()
+const onSurnameInput = () => {
+  removeError($surname)
+  hasSurnameError = false
+  checkErrors()
 
-//   if (($surname.val().trim().length = 0)) {
-//     isSurnameValid = false
-//   } else {
-//     isSurnameValid = true
-//   }
-// }
+  if (($surname.val().trim().length = 0)) {
+    isSurnameValid = false
+  } else {
+    isSurnameValid = true
+  }
+}
 
 // const checkRegion = () => {
 //   if (isRegionSelected) {
@@ -170,15 +150,15 @@ const onCompanyInput = () => {
 //   }
 // }
 
-// const onRegionSelect = () => {
-//   if (!isRegionSelected) {
-//     removeError($region)
-//     hasRegionError = false
-//     checkErrors()
+const onRegionSelect = () => {
+  if (!isRegionSelected) {
+    removeError($region)
+    hasRegionError = false
+    checkErrors()
 
-//     isRegionSelected = true
-//   }
-// }
+    isRegionSelected = true
+  }
+}
 
 // const checkCountry = () => {
 //   if (isCountrySelected) {
@@ -220,29 +200,29 @@ const onEmailInput = () => {
   }
 }
 
-// const onPhoneInput = () => {
-//   removeError($phone)
-//   hasPhoneError = false
-//   checkErrors()
+const onPhoneInput = () => {
+  removeError($phone)
+  hasPhoneError = false
+  checkErrors()
 
-//   if ($phone.val().includes('_')) {
-//     isPhoneValid = false
-//   } else {
-//     isPhoneValid = true
-//   }
-// }
+  if ($phone.val().includes('_')) {
+    isPhoneValid = false
+  } else {
+    isPhoneValid = true
+  }
+}
 
-// const onFaxInput = () => {
-//   removeError($fax)
-//   hasFaxError = false
-//   checkErrors()
+const onFaxInput = () => {
+  removeError($fax)
+  hasFaxError = false
+  checkErrors()
 
-//   if ($fax.val().includes('_')) {
-//     isFaxValid = false
-//   } else {
-//     isFaxValid = true
-//   }
-// }
+  if ($fax.val().includes('_')) {
+    isFaxValid = false
+  } else {
+    isFaxValid = true
+  }
+}
 
 const onMessageInput = () => {
   removeError($message)
@@ -262,14 +242,13 @@ const onSubmit = e => {
   setErrors()
 
   if (
-    // isRegionSelected &&
+    isRegionSelected &&
     isCountrySelected &&
     isNameValid &&
-    isCompanyValid &&
-    // isSurnameValid &&
+    isSurnameValid &&
     isEmailValid &&
-    // isPhoneValid &&
-    // isFaxValid &&
+    isPhoneValid &&
+    isFaxValid &&
     isMessageValid &&
     isChecked
   ) {
@@ -292,15 +271,14 @@ const onCheckboxChange = () => {
 }
 
 $name.on('input', onNameInput)
-$company.on('input', onCompanyInput)
-// $surname.on('input', onSurnameInput)
+$surname.on('input', onSurnameInput)
 
-// $region.on('select2:select', onRegionSelect)
+$region.on('select2:select', onRegionSelect)
 $country.on('select2:select', onCountrySelect)
 
 $email.on('input', onEmailInput)
-// $phone.on('input', onPhoneInput)
-// $fax.on('input', onFaxInput)
+$phone.on('input', onPhoneInput)
+$fax.on('input', onFaxInput)
 $message.on('input', onMessageInput)
 $checkbox.on('change', onCheckboxChange)
 $submit.on('click', onSubmit)
