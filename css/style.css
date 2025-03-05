@@ -4278,15 +4278,14 @@ section {
     .history_new .history__date-year {
       width: 100px;
       margin: 0; } }
-  @media all and (min-width: 768px) {
-    .history_new .history__date-img-block {
-      width: 288px;
-      height: 162px; } }
-  @media all and (min-width: 1280px) {
-    .history_new .history__date-img-block {
-      width: 362px;
-      height: 204px;
-      margin: 0; } }
+  .history_new .history__date-img-block {
+    width: 288px;
+    height: 162px; }
+    @media all and (min-width: 1280px) {
+      .history_new .history__date-img-block {
+        width: 362px;
+        height: 204px;
+        margin: 0; } }
 
 .assembly__img-block {
   width: 100%;
