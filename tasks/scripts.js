@@ -9,7 +9,7 @@ module.exports = function scripts() {
     .pipe(plumber())
     .pipe(
       webpackStream({
-        mode: "development",
+        mode: "production", // "development", //
         output: {
           filename: "[name].min.js",
         },
