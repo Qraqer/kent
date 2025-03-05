@@ -48,8 +48,7 @@ const html = gulp.series(
   gulp.parallel(
     htmlFull,
     htmlMin
-  ),
-  /* showHtmlMinSize */
+  )
 )
 
 module.exports = html;
