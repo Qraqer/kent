@@ -1,0 +1,34 @@
+.become-partner {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    @media all and (min-width: 768px) {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+  }
+
+  &__h1 {
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.2em;
+    @media all and (min-width: 768px) {
+      font-size: 46px;
+    }
+  }
+
+  &__subtitle {
+    line-height: 1.8em;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 8px;
+    @media all and (min-width: 768px) {
+      margin-top: 16px;
+    }
+  }
+}
