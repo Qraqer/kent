@@ -4223,71 +4223,6 @@ section {
     padding-left: 0;
     padding-right: 0; } }
 
-.history_new .history__promo {
-  background: url("../img/top_history_mb.jpg") no-repeat center center/cover; }
-  @media all and (min-width: 768px) {
-    .history_new .history__promo {
-      background-image: url("../img/top_history.jpg");
-      margin-bottom: 48px; } }
-  @media all and (min-width: 1280px) {
-    .history_new .history__promo {
-      margin-bottom: 40px; } }
-
-@media all and (min-width: 768px) {
-  .history_new .history__desc-block {
-    margin-bottom: 48px; } }
-
-@media all and (min-width: 1280px) {
-  .history_new .history__desc-block {
-    margin-bottom: 80px; } }
-
-.history_new .history__date {
-  font-size: 14px;
-  line-height: 1.8em; }
-  @media all and (min-width: 768px) {
-    .history_new .history__date {
-      padding: 64px 0 40px; } }
-  @media all and (min-width: 1280px) {
-    .history_new .history__date {
-      padding: 40px 0;
-      gap: 80px; } }
-  @media all and (min-width: 768px) {
-    .history_new .history__date:first-child {
-      padding-top: 32px; } }
-  @media all and (min-width: 1280px) {
-    .history_new .history__date:first-child {
-      padding: 40px 0; } }
-  .history_new .history__date ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid; }
-    .history_new .history__date ul li {
-      position: relative;
-      padding-left: 20px; }
-      .history_new .history__date ul li::before {
-        content: '';
-        position: absolute;
-        left: 8px;
-        top: 11px;
-        width: 4px;
-        height: 4px;
-        background: #151515;
-        border-radius: 50%; }
-  @media all and (min-width: 1280px) {
-    .history_new .history__date-year {
-      width: 100px;
-      margin: 0; } }
-  @media all and (min-width: 768px) {
-    .history_new .history__date-img-block {
-      width: 288px;
-      height: 162px; } }
-  @media all and (min-width: 1280px) {
-    .history_new .history__date-img-block {
-      width: 362px;
-      height: 204px;
-      margin: 0; } }
-
 .assembly__img-block {
   width: 100%;
   height: 500px;
@@ -4362,6 +4297,42 @@ section {
     font-size: 20px;
     line-height: 24px;
     margin: 0 0 12px; } }
+
+.become-partner__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  text-align: center; }
+  @media all and (min-width: 768px) {
+    .become-partner__box {
+      max-width: 680px;
+      margin: 0 auto; } }
+
+.become-partner__h1 {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.2em; }
+  @media all and (min-width: 768px) {
+    .become-partner__h1 {
+      font-size: 46px; } }
+
+.become-partner__subtitle {
+  line-height: 1.8em; }
+
+.become-partner__btn {
+  width: 100%;
+  margin-top: 8px; }
+  @media all and (min-width: 768px) {
+    .become-partner__btn {
+      margin-top: 16px; } }
 
 .buy__part {
   display: none; }
