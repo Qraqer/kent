@@ -1,0 +1,35 @@
+@@include('./components/common/header.html', { title: 'Где купить Kentatsu' })
+
+@@include('./components/common/explain_assets.html')
+
+<div class="container">
+  <div class="explain is--opened">
+    <h3 class="explain__title js-explain-opener">Модальное окно "Стать партнёром"</h3>
+    <div class="explain__box">
+      <div class="explain__box-inner">
+        <ul>
+          <li>Модальное окно "Стать партнёром" вызывается так же, как на странице <a href="https://kentatsu.global/ru/partners/">сайта</a>.</li>
+          <li>Для появления формы необходимо разместить на странице шаблон модального окна, его можно взять здесь:
+            <br>source/components/where-buy/where-buy.html</li>
+          <li>Проверка введенных полей в данной форме осуществляется на сервере. Изменения в данный процесс имеет смысл вносить на всём сайте, оформив отдельной задачей.</li>
+          <li>На текущей странице модальное окно можно посмотреть, нажав кнопку:
+            <br><br>@@include('./components/where-buy/modal-call-button.html')
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="explain is--opened">
+    <h3 class="explain__title js-explain-opener">Страница</h3>
+    <div class="explain__box">
+      <div class="explain__box-inner">
+        <p><a href="buy-new.html">Страница "Где купить" с изменениями</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+@@include('./components/where-buy/become-partner.html')
+
+@@include('./components/common/footer.html')

@@ -1,0 +1,105 @@
+<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/style.min.css"><link rel="icon" href="https://kentatsu.global/favicon.ico" type="image/x-icon"><title>Где купить Kentatsu</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><header class="header"><div class="header__container container"><a href="/" class="header__logo-link" aria-label="На главную"><img src="./img/kentatsu.svg" alt="Kentatsu" class="header__logo"></a><nav class="header__nav"><ul class="header__nav-list"><li class="header__nav-item"><a href="/ru/about/" class="header__nav-link">О бренде</a></li><li class="header__nav-item"><a href="/ru/catalog/" class="header__nav-link">Продукты</a></li><li class="header__nav-item"><a href="/ru/partners/" class="header__nav-link">Партнёрам</a></li><li class="header__nav-item"><a href="#" class="header__nav-link">Объекты</a></li><li class="header__nav-item"><a href="/ru/buy/" class="header__nav-link">Где купить?</a></li><li class="header__nav-item"><a href="/ru/contacts/" class="header__nav-link">Контакты</a></li><li class="header__nav-item"><a href="/regions/" class="header__nav-link"><img src="./img/pin.svg"> Россия</a></li><li class="header__nav-item"><a href="./?lang=en" class="header__nav-link"><img src="./img/world.svg"> RU</a></li></ul></nav><button class="header__nav-button" type="button" aria-label="Показать/скрыть меню"><span></span> <span></span> <span></span></button></div></header><main><style>.explain {
+  margin: 30px 0;
+  padding: 24px 32px;
+  border: 1px solid #777;
+  overflow: hidden;
+  transition: .2s ease;
+}
+.explain:has(.explain__title:hover) {
+  background: #ddd;
+}
+.section-explain ul,
+.explain ul {
+  list-style: none;
+}
+.explain__box ol li {
+  min-height: 20px;
+}
+.explain ul li::after {
+  background: #6C7684!important;
+  border: none!important;
+  top: 8px!important;
+  width: 5px!important;
+  height: 5px!important;
+}
+.explain .prim {
+  opacity: .75;
+}
+.explain p {
+  margin: 8px 0;
+}
+.explain a {
+  text-decoration: underline;
+  font-size: 14px;
+}
+.explain__title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0;
+}
+.explain__title::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 3.5V3H11V3.5L11 11H3.50043H3.00043V12H3.50043H11L11 19.5V20H12V19.5L12 12L19.5004 12H20.0004V11H19.5004H12L12 3.5Z' fill='currentColor'/%3E%3C/svg%3E") no-repeat center center / 24px 24px;
+}
+.is--opened .explain__title::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23.0104 10.9887L23.364 10.6352L22.6569 9.92805L22.3033 10.2816L17 15.5849L11.697 10.2819L11.3435 9.92833L10.6364 10.6354L10.9899 10.989L16.2929 16.292L10.9896 21.5953L10.6361 21.9489L11.3432 22.656L11.6967 22.3024L17 16.9991L22.3036 22.3027L22.6572 22.6562L23.3643 21.9491L23.0107 21.5956L17.7071 16.292L23.0104 10.9887Z' fill='currentColor'/%3E%3C/svg%3E%0A");
+}
+.explain__box {
+  display: grid;
+  grid-template-rows: 0;
+  transition: 0.3s ease;
+}
+.is--opened .explain__box {
+  grid-template-rows: 1fr;
+}
+.explain__box-inner {
+  font-size: 13px;
+  padding-top: 12px;
+  overflow: hidden;
+}
+.lk-container + h3 {
+  margin-top: 50px;
+}
+h3 + .lk-container {
+  margin-top: 20px;
+}
+.explain__box-inner ul {
+  display: grid;
+  gap: 8px;
+}
+.explain__box-inner ul li {
+  position: relative;
+}
+.explain__box-inner ul li::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: #F32424;
+}</style><script>document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.js-explain-opener')?.forEach(element =>
+    element.addEventListener('click', () =>
+      element.parentElement.classList.toggle('is--opened')
+    )
+  )
+
+  $('.go-link').on('click', function(e) {
+    e.preventDefault();
+    $("html, body").animate(
+      {
+        scrollTop: $($(e.target).attr("href")).offset().top - $(".header-bottom").height() + "px",
+      },
+      {
+        duration: 500,
+        easing: "swing",
+      }
+    );
+  })
+})</script><div class="container"><div class="explain is--opened"><h3 class="explain__title js-explain-opener">Модальное окно "Стать партнёром"</h3><div class="explain__box"><div class="explain__box-inner"><ul><li>Модальное окно "Стать партнёром" вызывается так же, как на странице <a href="https://kentatsu.global/ru/partners/">сайта</a>.</li><li>Для появления формы необходимо разместить на странице шаблон модального окна, его можно взять здесь:<br>source/components/where-buy/where-buy.html</li><li>Проверка введенных полей в данной форме осуществляется на сервере. Изменения в данный процесс имеет смысл вносить на всём сайте, оформив отдельной задачей.</li><li>На текущей странице модальное окно можно посмотреть, нажав кнопку:<br><br><button type="button" class="for-partners__partnership btn" data-trigger="modal-partnership">Стать партнёром</button></li></ul></div></div></div><div class="explain is--opened"><h3 class="explain__title js-explain-opener">Страница</h3><div class="explain__box"><div class="explain__box-inner"><p><a href="buy-new.html">Страница "Где купить" с изменениями</a></p></div></div></div></div><section class="modal" id="modal-partnership" data-modal="modal-partnership"><div class="modal__overlay"><div class="modal__body"><header class="modal__header"><h2 class="modal__title">Стать партнером</h2><button class="modal__close-btn" aria-label="Закрыть"><svg><use xlink:href="./img/sprite.svg#close"></use></svg></button></header><p class="modal__desc">Оставьте заявку и&nbsp;мы свяжемся с&nbsp;вами в&nbsp;ближайшее время.</p><form onsubmit="return sendPartnerForm(this);" class="form-block"><div class="input-block"><label><span class="input-block__name">Как к вам обращаться? <span>*</span></span> <input type="text" name="name"></label><p class="input-block__error">Поле обязательно к заполнению</p></div><div class="input-block"><label><span class="input-block__name">Название компании</span> <input type="text" name="company"></label><p class="input-block__error">Поле обязательно к заполнению</p></div><div class="input-block"><span class="input-block__name">Страна</span> <select class="select visually-hidden" aria-placeholder="Выберите страну" name="country"><option></option><option value="Беларусь">Беларусь</option><option value="Германия">Германия</option><option value="Казахстан">Казахстан</option><option value="Кыргызстан">Кыргызстан</option><option value="Латвия">Латвия</option><option selected="selected" value="Россия">Россия</option><option value="Таджикистан">Таджикистан</option><option value="Туркменистан">Туркменистан</option><option value="Узбекистан">Узбекистан</option><option value="Япония">Япония</option></select><p class="input-block__error">Поле обязательно к заполнению</p></div><div class="input-block"><label><span class="input-block__name">Email <span>*</span></span> <input type="email" name="email"></label><p class="input-block__error">Введите корректный Email</p></div><div class="input-block"><label><span class="input-block__name">Сообщение <span>*</span></span> <textarea name="message"></textarea></label><p class="input-block__error">Поле обязательно к заполнению</p></div><div class="checkbox-block"><label><input type="checkbox" class="visually-hidden" name="agreement"><div class="checkbox-block__checkbox"></div><span class="checkbox-block__text">Я соглашаюсь с <a data-trigger="privacy-policy" onclick="return false;">условиями обработки персональных данных</a></span></label></div><div class="modal__btn-block"><button class="modal__submit btn" type="submit" onclick="return sendPartnerForm(this.form);">Отправить заявку</button></div></form></div></div></section></main><footer class="footer"><div class="footer__container container"><div class="footer__top"><div class="footer__logo-block"><a href="#" class="footer__logo-link" aria-label="На главную"><img src="./img/kentatsu-white.svg" alt="Kentatsu"></a></div><nav class="footer__nav"><div class="footer__nav-block"><ul class="footer__nav-list"><li class="footer__nav-item"><a href="/ru/about/" class="footer__nav-link main">О бренде</a></li><li class="footer__nav-item"><a href="/ru/about/?tab=history" class="footer__nav-link">История</a></li><li class="footer__nav-item"><a href="/ru/about/?tab=philosophy" class="footer__nav-link">Философия</a></li><li class="footer__nav-item"><a href="/ru/about/?tab=innovation" class="footer__nav-link">Технологии</a></li></ul></div><div class="footer__nav-block"><ul class="footer__nav-list"><li class="footer__nav-item"><a href="/ru/catalog/" class="footer__nav-link main">Продукты</a></li><li class="footer__nav-item"><a href="/ru/catalog/residential-air-conditioners/" class="footer__nav-link">Бытовые кондиционеры</a></li><li class="footer__nav-item"><a href="/ru/catalog/multi-split-systems/" class="footer__nav-link">Мульти-сплит-системы</a></li><li class="footer__nav-item"><a href="/ru/catalog/vrf-systems/" class="footer__nav-link">Многозональные системы DX PRO</a></li><li class="footer__nav-item"><a href="/ru/catalog/light-commercial-air-conditioning-systems/" class="footer__nav-link">Полупромышленные кондиционеры</a></li><li class="footer__nav-item"><a href="/ru/catalog/chillers/" class="footer__nav-link">Чиллеры</a></li><li class="footer__nav-item"><a href="/ru/catalog/fancoil-units/" class="footer__nav-link">Фанкойлы</a></li><li class="footer__nav-item"><a href="/ru/catalog/compressor-condensing-units/" class="footer__nav-link">Компрессорно-Конденсаторные блоки</a></li><li class="footer__nav-item"><a href="/ru/catalog/rooftop-units/" class="footer__nav-link">Руфтопы</a></li><li class="footer__nav-item"><a href="/ru/catalog/hydraulic-components/" class="footer__nav-link">Гидравлические компоненты для чиллеров и тепловых насосов</a></li></ul></div><div class="footer__nav-block"><ul class="footer__nav-list"><li class="footer__nav-item"><a href="/ru/partners/" class="footer__nav-link main">Партнерам</a></li><li class="footer__nav-item"><a href="#" class="footer__nav-link main">Объекты</a></li><li class="footer__nav-item"><a href="/ru/buy/" class="footer__nav-link main">Где купить</a></li><li class="footer__nav-item"><a href="/ru/contacts/" class="footer__nav-link main">Контакты</a></li></ul></div></nav></div><div class="footer__bottom"><div class="footer__bottom-links-block"><p>© Kentatsu 2022.</p></div></div></div></footer><script src="js/main.min.js"></script></body></html>
