@@ -156,10 +156,16 @@
     
     &-empty {
       color: #ADB0B4;
+      line-height: 1.8em;
       
       .filter__reset {
         color: #F32424;
         cursor: pointer;
+        transition: .2s ease;
+
+        &:hover {
+          color: #e71212;
+        }
       }
     }
   }
@@ -253,6 +259,10 @@
         
         &-label {
           font-weight: 600;
+        }
+
+        &-value {
+          line-height: 1.5em;
         }
       }
       
