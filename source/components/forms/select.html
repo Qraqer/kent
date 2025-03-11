@@ -1,0 +1,20 @@
+<div class="input-block">
+  <span class="input-block__name">@@label</span>
+  <select class="select visually-hidden" aria-placeholder="@@placeholder" name="@@code">
+    <option></option>
+    @@if (selected === 'Y') {
+      @@for (let i = 0; i < 1; i += 1) {
+      <option selected value="` + arr[i] + `">` + arr[i] + `</option>
+      }
+      @@for (let i = 1; i < arr.length; i += 1) {
+      <option value="` + arr[i] + `">` + arr[i] + `</option>
+      }
+    }
+    @@if (selected !== 'Y') {
+      @@for (let i = 0; i < arr.length; i += 1) {
+      <option value="` + arr[i] + `">` + arr[i] + `</option>
+      }
+    }
+  </select>
+  <p class="input-block__error">@@error</p>
+</div>

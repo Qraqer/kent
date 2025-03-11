@@ -1,0 +1,37 @@
+@@include('./components/common/header.html', {title: 'Главная' })
+
+@@include('./components/common/explain_assets.html')
+
+<div class="container">
+
+  <div class="explain">
+    <h3 class="explain__title js-explain-opener">Информация о задаче</h3>
+    <div class="explain__box">
+      <div class="explain__box-inner">
+        <p><b>Исполнитель:</b> Григорий Голов, <a href="mailto:GGolov@daichi.ru">GGolov@daichi.ru</a>,
+          <a href="https://wa.me/79219345244">WhatsApp</a>,
+          <a href="https://t.me/GragG">Telegram</a>
+        </p>
+        <p><b>Задача в Jira:</b> <a href="https://blpctrade.atlassian.net/browse/PS-740" target="_new">PS-740 «Поменять год в подвале Kentatsu Global на актуальный»</a></p>
+        <!--
+        <p><b>Ветка git:</b> <a href="https://git.daichicloud.ru/b2b/daichi.business/-/tree/feature/loyalty2025" target="_new">daichi.business/feature/loyalty2025</a></p>
+        -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="explain is--opened">
+    <h3 class="explain__title js-explain-opener">Для интеграции</h3>
+    <div class="explain__box">
+      <div class="explain__box-inner">
+        <ul>
+          <li>В подвале в пункт меню "Гидравлические компоненты для чиллеров и тепловых насосов" необходимо пробел после "и" заменить на неразрывный.</li>
+          <li>В подвале необходимо в блоке с текстом "Kentatsu 2025" год указывать скриптом, чтобы поддерживать актуальность информации.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+@@include('./components/common/footer.html')
