@@ -3,6 +3,11 @@
   font-weight: 600;
   font-size: 14px;
   padding-bottom: 3px;
+  transition: .2s ease;
+  
+  &:hover {
+    color: #f32424;
+  }
 }
 
 .objects {
@@ -59,7 +64,7 @@
     }
   }
   
-  &__title {
+  &__item-title {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2em;
@@ -128,7 +133,9 @@
     }
     
     &__form .input-block:last-child {
-      grid-column: span 2;
+      @media all and (min-width: 768px) {
+        grid-column: span 2;
+      }
       @media all and (min-width: 1280px) {
         grid-column: span 1;
       }
@@ -496,11 +503,17 @@ span.red {
   &::after {
     width: 80px;
     height: 80px;
-    top: 20%;
+    top: 100px;
     left: 50%;
     margin: -40px 0 0 -40px;
     background: url("data:image/svg+xml,%3Csvg width='68' height='68' viewBox='0 0 68 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34 66C51.6731 66 66 51.6731 66 34C66 16.3269 51.6731 2 34 2C16.3269 2 2 16.3269 2 34' stroke='%23E50019' stroke-width='4'/%3E%3C/svg%3E%0A") no-repeat center center;
     animation: round 1s infinite linear;
+    @media all and (min-width: 768px) {
+      top: 15vh;
+    }
+    @media all and (min-width: 1280px) {
+      top: 20vh;
+    }
   }
 }
 
