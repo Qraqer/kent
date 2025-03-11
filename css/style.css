@@ -5702,7 +5702,12 @@ section {
   color: #151515;
   font-weight: 600;
   font-size: 14px;
-  padding-bottom: 3px; }
+  padding-bottom: 3px;
+  -webkit-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease; }
+  .index__title-link:hover {
+    color: #f32424; }
 
 .objects__header {
   display: -webkit-box;
@@ -5774,7 +5779,7 @@ section {
               flex: 0 0 32.25%;
       height: 100%; } }
 
-.objects__title {
+.objects__item-title {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2em;
@@ -5785,11 +5790,11 @@ section {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical; }
   @media all and (min-width: 768px) {
-    .objects__title {
+    .objects__item-title {
       font-size: 32px;
       -webkit-line-clamp: 3; } }
   @media all and (min-width: 1280px) {
-    .objects__title {
+    .objects__item-title {
       -webkit-line-clamp: 9; } }
 
 @media all and (min-width: 768px) {
@@ -5844,11 +5849,12 @@ section {
   @media all and (min-width: 768px) {
     .objects-filter {
       margin: 40px 0; } }
-  .objects-filter__form .input-block:last-child {
-    grid-column: span 2; }
-    @media all and (min-width: 1280px) {
-      .objects-filter__form .input-block:last-child {
-        grid-column: span 1; } }
+  @media all and (min-width: 768px) {
+    .objects-filter__form .input-block:last-child {
+      grid-column: span 2; } }
+  @media all and (min-width: 1280px) {
+    .objects-filter__form .input-block:last-child {
+      grid-column: span 1; } }
 
 .objects__list {
   display: grid;
@@ -6177,12 +6183,18 @@ span.red {
   .loading::after {
     width: 80px;
     height: 80px;
-    top: 20%;
+    top: 100px;
     left: 50%;
     margin: -40px 0 0 -40px;
     background: url("data:image/svg+xml,%3Csvg width='68' height='68' viewBox='0 0 68 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34 66C51.6731 66 66 51.6731 66 34C66 16.3269 51.6731 2 34 2C16.3269 2 2 16.3269 2 34' stroke='%23E50019' stroke-width='4'/%3E%3C/svg%3E%0A") no-repeat center center;
     -webkit-animation: round 1s infinite linear;
             animation: round 1s infinite linear; }
+    @media all and (min-width: 768px) {
+      .loading::after {
+        top: 15vh; } }
+    @media all and (min-width: 1280px) {
+      .loading::after {
+        top: 20vh; } }
 
 @-webkit-keyframes round {
   0% {
