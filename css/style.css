@@ -5870,10 +5870,16 @@ section {
     .objects__list {
       grid-template-columns: repeat(4, 1fr); } }
   .objects__list-empty {
-    color: #ADB0B4; }
+    color: #ADB0B4;
+    line-height: 1.8em; }
     .objects__list-empty .filter__reset {
       color: #F32424;
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-transition: .2s ease;
+      -o-transition: .2s ease;
+      transition: .2s ease; }
+      .objects__list-empty .filter__reset:hover {
+        color: #e71212; }
 
 .objects__item {
   color: #151515; }
@@ -5968,6 +5974,8 @@ section {
     font-size: 14px; }
   .objects__section .object-page__top-label {
     font-weight: 600; }
+  .objects__section .object-page__top-value {
+    line-height: 1.5em; }
 
 .objects__section .object-page__detail-text {
   line-height: 1.8em;
