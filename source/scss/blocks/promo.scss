@@ -11,16 +11,12 @@
     no-repeat center / cover url('../img/promo-bg-new.jpg');
 
   &.promo-20 {
-    background: no-repeat center / cover url('../img/banner_20.jpg');
-  }
-
-  &.promo-20.gradient {
     background: linear-gradient(
         95.08deg,
         rgba(132, 1, 1, 0.3) 3.85%,
         rgba(189, 13, 13, 0) 49.77%
       ),
-      url(../img/banner_20.jpg) center / cover no-repeat;
+      url('../img/banner_20.jpg') center / cover no-repeat;
   }
 }
 
