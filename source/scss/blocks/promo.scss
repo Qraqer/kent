@@ -9,6 +9,10 @@
       rgba(189, 13, 13, 0) 49.77%
     ),
     no-repeat center / cover url('../img/promo-bg-new.jpg');
+
+  &.promo-20 {
+    background: no-repeat center / cover url('../img/banner_20.jpg');
+  }
 }
 
 .promo__title {
@@ -35,6 +39,10 @@
         rgba(189, 13, 13, 0) 49.77%
       ),
       no-repeat center / cover url('../img/promo-bg-new.jpg');
+
+    &.promo-20 {
+      background: no-repeat center / cover url('../img/banner_20.jpg');
+    }
   }
 }
 

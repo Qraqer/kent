@@ -25,6 +25,15 @@
   height: 22px;
 }
 
+.header__logo.logo-20 {
+  width: unset;
+  height: 16px;
+
+  @media all and (min-width:768px) {
+    height: 22px;
+  }
+}
+
 .header__nav-list {
   display: flex;
   align-items: center;
