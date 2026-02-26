@@ -6657,6 +6657,9 @@ span.red {
   background: linear-gradient(95.08deg, rgba(132, 1, 1, 0.3) 3.85%, rgba(189, 13, 13, 0) 49.77%), no-repeat center/cover url("../img/promo-bg-new.jpg"); }
   .promo__block.promo-20 {
     background: no-repeat center/cover url("../img/banner_20.jpg"); }
+  .promo__block.promo-20.gradient {
+    background: -o-linear-gradient(354.92deg, rgba(132, 1, 1, 0.3) 3.85%, rgba(189, 13, 13, 0) 49.77%), url(../img/banner_20.jpg) center/cover no-repeat;
+    background: linear-gradient(95.08deg, rgba(132, 1, 1, 0.3) 3.85%, rgba(189, 13, 13, 0) 49.77%), url(../img/banner_20.jpg) center/cover no-repeat; }
 
 .promo__title {
   font-weight: 600;
@@ -6676,9 +6679,7 @@ span.red {
     padding: 32px;
     min-height: 727px;
     background: -o-linear-gradient(354.92deg, rgba(150, 0, 0, 0.3) 3.85%, rgba(189, 13, 13, 0) 49.77%), no-repeat center/cover url("../img/promo-bg-new.jpg");
-    background: linear-gradient(95.08deg, rgba(150, 0, 0, 0.3) 3.85%, rgba(189, 13, 13, 0) 49.77%), no-repeat center/cover url("../img/promo-bg-new.jpg"); }
-    .promo__block.promo-20 {
-      background: no-repeat center/cover url("../img/banner_20.jpg"); } }
+    background: linear-gradient(95.08deg, rgba(150, 0, 0, 0.3) 3.85%, rgba(189, 13, 13, 0) 49.77%), no-repeat center/cover url("../img/promo-bg-new.jpg"); } }
 
 @media (max-width: 767px) {
   .promo__block {
